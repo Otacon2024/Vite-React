@@ -2,7 +2,6 @@
 function Message() {
     // JSX: JavaScript XML
     const name = "Otacon";
-    
     if (name) {
         return <h1>Hello {name}</h1>;
     } else {
