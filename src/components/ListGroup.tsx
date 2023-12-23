@@ -1,21 +1,31 @@
+import { useState } from "react";
+
 function ListGroup() {
   let items = ["London", "Paris", "New York", "Tokyo"];
-  let selectedItem = -1;
+  // Hook
+  //   const arr = useState(-1);
+  //   arr[0]; // variable (selectedItem)
+  //   arr[1]; // updater function (setSelectedItem)
+  const [selectedIndex, setSelectedIndex] = useState(-1);
 
   return (
     <>
       <h1>List</h1>
-      {items.length === 0 && "There are no items in the list"}
+
+      {items.length === 0 && <p>No item found</p>}
+
       <ul className="list-group">
         {items.map((item, index) => (
           <li
             className={
-              selectedItem === index
+              selectedIndex === index
                 ? "list-group-item active"
                 : "list-group-item"
             }
             key={item}
-            onClick={}
+            onClick={() => {
+              setSelectedIndex(index);
+            }}
           >
             {item}
           </li>
