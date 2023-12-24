@@ -1,5 +1,5 @@
 function Alert() {
-  return <div>Alert</div>;
+  return <div className="alert alert-primary">Alert</div>;
 }
 
 export default Alert;
