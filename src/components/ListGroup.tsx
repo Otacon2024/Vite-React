@@ -1,6 +1,12 @@
 import { useState } from "react";
 
-function ListGroup() {
+// Some people prefer to call it "interface ListGroupProps {}"
+interface Props {
+  items: string[];
+  heading: string;
+}
+
+function ListGroup(props: Props) {
   let items = ["London", "Paris", "New York", "Tokyo"];
   // Hook
   //   const arr = useState(-1);
