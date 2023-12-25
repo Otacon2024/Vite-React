@@ -3,11 +3,12 @@ import React from "react";
 interface Props {
   children: string;
   onClick: () => void;
+  color: string;
 }
 
-const Button = ({ children, onClick }: Props) => {
+const Button = ({ children, onClick, color }: Props) => {
   return (
-    <button className="btn btn-primary" onClick={onClick}>
+    <button className={"btn btn-" + color} onClick={onClick}>
       {children}
     </button>
   );
