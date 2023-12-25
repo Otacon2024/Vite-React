@@ -5,7 +5,7 @@ function App() {
   return (
     <>
       <Alert>My Alert</Alert>
-      <Button onClick={() => console.log("clicked")}>My button</Button>;
+      <Button onClick={() => console.log("clicked")}>My button</Button>
     </>
   );
 }
