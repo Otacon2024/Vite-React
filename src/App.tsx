@@ -7,7 +7,9 @@ function App() {
   return (
     <>
       {alertVisibility === true && <Alert>My Alert</Alert>}
-      <Button onClick={() => setAlertVisibility(true)}>My button</Button>
+      <Button onClick={() => setAlertVisibility(!alertVisibility)}>
+        My button
+      </Button>
     </>
   );
 }
