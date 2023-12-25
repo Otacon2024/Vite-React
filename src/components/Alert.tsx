@@ -5,7 +5,9 @@ interface Props {
 }
 
 function Alert({ children }: Props) {
-  return <div className="alert alert-primary">{children}</div>;
+  return (
+    <div className="alert alert-primary alert-dismissible">{children}</div>
+  );
 }
 
 export default Alert;
