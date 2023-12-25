@@ -2,11 +2,7 @@ import Alert from "./components/Alert";
 import Button from "./components/Button";
 
 function App() {
-  return (
-    <div>
-      <Button />
-    </div>
-  );
+  return <Button>My button</Button>;
 }
 
 export default App;
