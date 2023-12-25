@@ -2,9 +2,10 @@ import { ReactNode } from "react";
 
 interface Props {
   children: ReactNode;
+  onClose: () => void;
 }
 
-function Alert({ children }: Props) {
+function Alert({ children, onClose }: Props) {
   return (
     <div className="alert alert-primary alert-dismissible">
       {children}
@@ -13,6 +14,7 @@ function Alert({ children }: Props) {
         className="btn-close"
         data-dismiss="alert"
         aria-label="Close"
+        onClick={onClose}
       />
     </div>
   );
