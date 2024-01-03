@@ -2,10 +2,13 @@ import { useState } from "react";
 
 const App = () => {
   const [isVisible, setVisibility] = useState(false);
+  let count = 0;
 
   const handleClick = () => {
-    setVisibility(true);
+    setVisibility(!isVisible);
+    count++;
     console.log(isVisible);
+    console.log(count);
   };
 
   return (
