@@ -1,5 +1,6 @@
 import { useState } from "react";
 import styled from "styled-components";
+import { HiCalendar } from "react-icons/hi2";
 
 const List = styled.ul`
   list-style: none;
@@ -26,6 +27,7 @@ function ListGroup({ items, heading, onSelectItem }: Props) {
 
   return (
     <>
+      <HiCalendar color="red" size="40" />
       <h1>{heading}</h1>
       {items.length === 0 && <p>No item found</p>}
 
