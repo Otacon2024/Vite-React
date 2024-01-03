@@ -1,17 +1,18 @@
-import ListGroup from "./components/ListGroup";
+import { useState } from "react";
 
-function App() {
-  const items = ["New York", "Los Angeles", "San Francisco"];
+const App = () => {
+  const [isVisible, setVisibility] = useState(false);
+
+  const handleClick = () => {
+    setVisibility(true);
+    console.log(isVisible);
+  };
 
   return (
     <div>
-      <ListGroup
-        heading="Miami"
-        items={items}
-        onSelectItem={(item) => console.log(item)}
-      />
+      <button onClick={handleClick}>Show</button>
     </div>
   );
-}
+};
 
 export default App;
