@@ -1,7 +1,9 @@
 import { useState } from "react";
 
 const App = () => {
+  // [false, true]
   const [isVisible, setVisibility] = useState(false);
+  const [isApproved, setApproved] = useState(true);
   let count = 0;
 
   const handleClick = () => {
