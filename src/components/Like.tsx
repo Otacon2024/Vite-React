@@ -1,7 +1,11 @@
 import { useState } from "react";
 import { AiFillHeart, AiOutlineHeart } from "react-icons/ai";
 
-const Like = () => {
+interface Props {
+  onClick: () => void;
+}
+
+const Like = (props: Props) => {
   const [status, setStatus] = useState(true);
 
   if (status)
