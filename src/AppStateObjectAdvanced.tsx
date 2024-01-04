@@ -7,8 +7,11 @@ interface Person {
   lastName: string;
 }
 
-const App = () => {
-  const [person, setPerson] = useState<Person>({ firstName: "", lastName: "" });
+const AppStateObjectAdvanced = () => {
+  const [person, setPerson] = useState<Person>({
+    firstName: "",
+    lastName: "",
+  });
   const [isLoading, setLoading] = useState<boolean>(false);
 
   useEffect(() => {
@@ -23,15 +26,15 @@ const App = () => {
     setPerson({ ...person, [e.target.name]: e.target.value });
   };
 
+  const fullName = person.firstName + " " + person.lastName;
+
   if (isLoading) {
     return <div>Loading...</div>;
   }
 
   return (
     <div>
-      <h1>
-        {person.firstName} {person.lastName}
-      </h1>
+      <h1>{fullName}</h1>
       <input
         name="firstName"
         type="text"
@@ -50,4 +53,4 @@ const App = () => {
   );
 };
 
-export default App;
+export default AppStateObjectAdvanced;
